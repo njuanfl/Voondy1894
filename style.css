@@ -91,15 +91,6 @@ button{ font-family: inherit; cursor: pointer; background: none; border: none; }
   line-height: 1;
   color: var(--ivory);
 }
-.brand__year{
-  font-family: var(--utility);
-  font-size: 9px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--brass);
-  border-top: 1px solid var(--line);
-  padding-top: 4px;
-}
 
 .nav-right{ display: flex; align-items: center; gap: 22px; }
 
@@ -318,16 +309,6 @@ button{ font-family: inherit; cursor: pointer; background: none; border: none; }
 }
 
 /* ===== Cart button ===== */
-.nav-link{
-  font-family: var(--utility);
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--smoke);
-  transition: color 0.25s ease;
-}
-.nav-link:hover{ color: var(--brass-light); }
-
 .cart-btn{
   position: relative;
   display: flex; align-items: center; justify-content: center;
