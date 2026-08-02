@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voondy 1894</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__note">Casa de fragancias &amp; indumentaria — fundada en 1894</span>
+    </div>
+  </header>
+
+  <nav class="masthead">
+    <div class="masthead__inner">
+      <a href="#inicio" class="brand" aria-label="Voondy 1894">
+        <svg class="wordmark" viewBox="0 0 640 230" role="img" aria-label="Voondy 1894">
+          <defs>
+            <linearGradient id="reflectFade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff" stop-opacity="0.55"/>
+              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <mask id="reflectMask">
+              <rect x="0" y="0" width="640" height="120" fill="url(#reflectFade)"/>
+            </mask>
+            <g id="wordmarkGlyphs">
+              <text x="0" y="140" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="150" fill="currentColor">V</text>
+              <g transform="translate(120,74)">
+                <circle r="42" fill="none" stroke="currentColor" stroke-width="9"/>
+                <circle r="15" fill="currentColor"/>
+              </g>
+              <g transform="translate(206,74)">
+                <circle r="42" fill="none" stroke="currentColor" stroke-width="9"/>
+                <circle r="15" fill="currentColor"/>
+              </g>
+              <text x="256" y="140" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="150" fill="currentColor">ndy</text>
+              <text x="478" y="172" font-family="'Jost', sans-serif" font-weight="500" font-size="30" letter-spacing="2" fill="currentColor">1894</text>
+            </g>
+          </defs>
+          <use href="#wordmarkGlyphs"/>
+          <g transform="translate(0,290) scale(1,-1)" mask="url(#reflectMask)">
+            <use href="#wordmarkGlyphs"/>
+          </g>
+        </svg>
+      </a>
+
+      <div class="nav-right">
+        <div class="tabs" role="tablist" aria-label="Secciones de la tienda">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="fragancias">Fragancias</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="ropa">Ropa</button>
+        </div>
+
+        <button class="cart-btn" id="cart-open" aria-label="Ver carrito">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M3 6h2l2.4 12.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"/>
+            <circle cx="10" cy="21" r="1"/>
+            <circle cx="17" cy="21" r="1"/>
+          </svg>
+          <span id="cart-badge" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__ornament" aria-hidden="true">
+        <svg viewBox="0 0 240 320" class="hero__bottle">
+          <path d="M100 40 h40 v22 c0 6 6 10 12 14 c14 8 20 20 20 36 v150 c0 12 -9 22 -21 22 h-62 c-12 0 -21 -10 -21 -22 v-150 c0 -16 6 -28 20 -36 c6 -4 12 -8 12 -14 z" fill="none" stroke="currentColor" stroke-width="1.1"/>
+          <rect x="94" y="18" width="52" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="1.1"/>
+          <line x1="68" y1="182" x2="172" y2="182" stroke="currentColor" stroke-width="0.6"/>
+          <line x1="68" y1="150" x2="172" y2="150" stroke="currentColor" stroke-width="0.4"/>
+        </svg>
+      </div>
+
+      <p class="hero__eyebrow">Perfumería &amp; sastrería · Est. MDCCCXCIV</p>
+      <h1 class="hero__title">VOONDY<span class="hero__title-reflection" aria-hidden="true">VOONDY</span></h1>
+      <p class="hero__tagline">Fragancias con carácter, indumentaria con oficio.<br>Una casa, dos tradiciones.</p>
+
+      <div class="hero__cta">
+        <button class="btn btn--ghost" data-goto="fragancias">Ver fragancias</button>
+        <button class="btn btn--ghost" data-goto="ropa">Ver ropa</button>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span><i>&#10022;</i><span></span></div>
+
+    <!-- FRAGANCIAS -->
+    <section class="catalog is-active" id="fragancias" data-panel="fragancias">
+      <div class="catalog__head">
+        <p class="catalog__eyebrow">Colección I</p>
+        <h2 class="catalog__title">Fragancias</h2>
+        <p class="catalog__desc">Composiciones destiladas con la misma paciencia con la que se guarda un secreto de familia.</p>
+      </div>
+      <div class="catalog__grid" id="fragancias-grid"></div>
+    </section>
+
+    <!-- ROPA -->
+    <section class="catalog" id="ropa" data-panel="ropa" hidden>
+      <div class="catalog__head">
+        <p class="catalog__eyebrow">Colección II</p>
+        <h2 class="catalog__title">Ropa</h2>
+        <p class="catalog__desc">Prendas y calzado de corte clásico, pensados para durar más que una temporada.</p>
+      </div>
+      <div class="catalog__grid" id="ropa-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <svg class="footer__seal" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <text x="50" y="56" text-anchor="middle" class="footer__seal-letter">V</text>
+      </svg>
+      <p class="footer__name">VOONDY &mdash; CASA FUNDADA EN 1894</p>
+      <p class="footer__legal">&copy; <span id="year"></span> Voondy. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL DE PRODUCTO -->
+  <div class="modal" id="modal">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__panel">
+      <button class="modal__close" id="modal-close" aria-label="Cerrar">&times;</button>
+      <div class="modal__img">
+        <img id="modal-img" src="" alt="">
+      </div>
+      <div class="modal__body">
+        <p class="modal__brand" id="modal-brand"></p>
+        <h3 class="modal__name" id="modal-name"></h3>
+        <p class="modal__meta" id="modal-meta"></p>
+        <div class="pill-row" id="modal-notes"></div>
+        <p class="modal__desc" id="modal-desc"></p>
+        <p class="modal__price" id="modal-price"></p>
+
+        <div class="modal__qty">
+          <button id="modal-qty-minus" aria-label="Restar">&minus;</button>
+          <input id="modal-qty" type="number" min="1" value="1" aria-label="Cantidad">
+          <button id="modal-qty-plus" aria-label="Sumar">+</button>
+        </div>
+
+        <div class="modal__actions">
+          <button class="btn btn--line" id="modal-add">Añadir al carrito</button>
+          <button class="btn btn--fill" id="modal-buy">Comprar ahora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARRITO -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__head">
+      <h3>Tu carrito</h3>
+      <button id="cart-close" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    <div class="cart-drawer__items" id="cart-items"></div>
+    <div class="cart-drawer__footer">
+      <div class="cart-drawer__total">
+        <span>Total</span>
+        <span id="cart-total">$0</span>
+      </div>
+      <button class="btn btn--fill btn--block" id="cart-checkout">Finalizar pedido por WhatsApp</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
