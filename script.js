@@ -92,8 +92,16 @@ function openModal(id){
   $("#modal-notes").style.display = p.notes.length ? "flex" : "none";
   $("#modal-qty").value = 1;
   $("#modal").dataset.id = id;
+  updateModalTotal();
   $("#modal").classList.add("is-open");
   document.body.style.overflow = "hidden";
+}
+function updateModalTotal(){
+  const id = $("#modal").dataset.id;
+  const p = PRODUCTS.find(x => x.id === id);
+  if(!p) return;
+  const qty = Math.max(1, parseInt($("#modal-qty").value) || 1);
+  $("#modal-total").textContent = fmt(p.price * qty);
 }
 function closeModal(){
   $("#modal").classList.remove("is-open");
@@ -228,10 +236,17 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#modal-qty-minus").addEventListener("click", () => {
     const el = $("#modal-qty");
     el.value = Math.max(1, parseInt(el.value) - 1);
+    updateModalTotal();
   });
   $("#modal-qty-plus").addEventListener("click", () => {
     const el = $("#modal-qty");
     el.value = parseInt(el.value) + 1;
+    updateModalTotal();
+  });
+  $("#modal-qty").addEventListener("input", () => {
+    const el = $("#modal-qty");
+    if(parseInt(el.value) < 1 || isNaN(parseInt(el.value))) el.value = 1;
+    updateModalTotal();
   });
 
   $("#cart-open").addEventListener("click", openCart);

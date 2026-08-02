@@ -139,12 +139,15 @@
         <p class="modal__meta" id="modal-meta"></p>
         <div class="pill-row" id="modal-notes"></div>
         <p class="modal__desc" id="modal-desc"></p>
-        <p class="modal__price" id="modal-price"></p>
+        <p class="modal__price"><span id="modal-price"></span> <span class="modal__price-unit">c/u</span></p>
 
-        <div class="modal__qty">
-          <button id="modal-qty-minus" aria-label="Restar">&minus;</button>
-          <input id="modal-qty" type="number" min="1" value="1" aria-label="Cantidad">
-          <button id="modal-qty-plus" aria-label="Sumar">+</button>
+        <div class="modal__qty-row">
+          <div class="modal__qty">
+            <button id="modal-qty-minus" aria-label="Restar">&minus;</button>
+            <input id="modal-qty" type="number" min="1" value="1" aria-label="Cantidad">
+            <button id="modal-qty-plus" aria-label="Sumar">+</button>
+          </div>
+          <p class="modal__total">Total: <span id="modal-total"></span></p>
         </div>
 
         <div class="modal__actions">
