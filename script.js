@@ -1,6 +1,6 @@
 /* ===== Voondy — configuración ===== */
 /* TODO: reemplaza por tu número de WhatsApp real (código de país + número, sin "+" ni espacios) */
-const WHATSAPP_NUMBER = "573000000000";
+const WHATSAPP_NUMBER = "573143946193";
 
 /* TODO: ajusta precios y datos según lo que definas para cada producto */
 const PRODUCTS = [

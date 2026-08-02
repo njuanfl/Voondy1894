@@ -22,34 +22,10 @@
   <nav class="masthead">
     <div class="masthead__inner">
       <a href="#inicio" class="brand" aria-label="Voondy 1894">
-        <svg class="wordmark" viewBox="0 0 640 230" role="img" aria-label="Voondy 1894">
-          <defs>
-            <linearGradient id="reflectFade" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#fff" stop-opacity="0.55"/>
-              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-            </linearGradient>
-            <mask id="reflectMask">
-              <rect x="0" y="0" width="640" height="120" fill="url(#reflectFade)"/>
-            </mask>
-            <g id="wordmarkGlyphs">
-              <text x="0" y="140" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="150" fill="currentColor">V</text>
-              <g transform="translate(120,74)">
-                <circle r="42" fill="none" stroke="currentColor" stroke-width="9"/>
-                <circle r="15" fill="currentColor"/>
-              </g>
-              <g transform="translate(206,74)">
-                <circle r="42" fill="none" stroke="currentColor" stroke-width="9"/>
-                <circle r="15" fill="currentColor"/>
-              </g>
-              <text x="256" y="140" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="150" fill="currentColor">ndy</text>
-              <text x="478" y="172" font-family="'Jost', sans-serif" font-weight="500" font-size="30" letter-spacing="2" fill="currentColor">1894</text>
-            </g>
-          </defs>
-          <use href="#wordmarkGlyphs"/>
-          <g transform="translate(0,290) scale(1,-1)" mask="url(#reflectMask)">
-            <use href="#wordmarkGlyphs"/>
-          </g>
-        </svg>
+        <span class="brand__mark">
+          <span class="brand__name">Voondy</span>
+          <span class="brand__year">MDCCCXCIV · 1894</span>
+        </span>
       </a>
 
       <div class="nav-right">
@@ -57,6 +33,8 @@
           <button class="tab is-active" role="tab" aria-selected="true" data-tab="fragancias">Fragancias</button>
           <button class="tab" role="tab" aria-selected="false" data-tab="ropa">Ropa</button>
         </div>
+
+        <a href="#ubicacion" class="nav-link">Ubicación</a>
 
         <button class="cart-btn" id="cart-open" aria-label="Ver carrito">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4">
@@ -113,6 +91,28 @@
       </div>
       <div class="catalog__grid" id="ropa-grid"></div>
     </section>
+    <div class="divider" aria-hidden="true"><span></span><i>&#10022;</i><span></span></div>
+
+    <!-- UBICACIÓN -->
+    <section class="location" id="ubicacion">
+      <div class="location__info">
+        <p class="catalog__eyebrow">Visítanos</p>
+        <h2 class="catalog__title">Nuestra tienda</h2>
+        <p class="location__text">Fragancias Voondy 1894 #1<br>Florencia, Caquetá, Colombia</p>
+        <p class="location__text location__text--muted">Ven a conocer y probar las fragancias en persona, o escríbenos por WhatsApp si prefieres comprar desde casa.</p>
+        <div class="location__actions">
+          <a class="btn btn--fill" href="https://www.google.com/maps/place/Fragancias+voOndy1894+%231/@1.6146389,-75.6181878,17z/data=!4m16!1m9!3m8!1s0x8e244f06bb76a429:0xc8e7e4d818c54653!2sFragancias+voOndy1894+%231!8m2!3d1.6146389!4d-75.6156129!9m1!1b1!16s%2Fg%2F11ql1k6ftz!3m5!1s0x8e244f06bb76a429:0xc8e7e4d818c54653!8m2!3d1.6146389!4d-75.6156129!16s%2Fg%2F11ql1k6ftz" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--line" href="https://wa.me/573143946193" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="location__map">
+        <iframe
+          src="https://www.google.com/maps?q=1.6146389,-75.6156129&hl=es&z=17&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Voondy 1894">
+        </iframe>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -122,6 +122,7 @@
         <text x="50" y="56" text-anchor="middle" class="footer__seal-letter">V</text>
       </svg>
       <p class="footer__name">VOONDY &mdash; CASA FUNDADA EN 1894</p>
+      <p class="footer__contact">Florencia, Caquetá, Colombia · WhatsApp <a href="https://wa.me/573143946193" target="_blank" rel="noopener">+57 314 3946193</a></p>
       <p class="footer__legal">&copy; <span id="year"></span> Voondy. Todos los derechos reservados.</p>
     </div>
   </footer>
